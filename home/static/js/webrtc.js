@@ -1,7 +1,13 @@
 const remoteAudioContainer = document.getElementById('remote_audio_container');
 const startCallButton = document.getElementById('start_call');
 const roomName = 'django'; // Add this line to get the room name from Django
-const signalingWebSocket = new WebSocket('ws://' + window.location.host + '/ws/signal/' + roomName + '/');
+var signalingWebSocket;
+if (window.location.protocol == "https:"){
+    signalingWebSocket = new WebSocket('wss://' + window.location.host + '/ws/signal/' + roomName + '/');
+} else{
+    signalingWebSocket = new WebSocket('wss://' + window.location.host + '/ws/signal/' + roomName + '/');
+}
+ 
 
 signalingWebSocket.addEventListener("open", (e) => {
     console.log("Connection Open");
