@@ -1,0 +1,40 @@
+{% load static %}
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <audio controls id="remote_audio"></audio>
+    
+    <button id="start_call">Start Call</button>
+
+    <script src="{% static 'js/webrtc.js' %}"></script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Audio Streaming</title>
+</head>
+<body>
+    <h1>Real-time Audio Streaming</h1>
+    <button id="start_call">Start Call</button>
+    <div id="remote_audio_container">
+        <!-- Remote audio elements will be added here -->
+    </div>
+    <button id="mute_unmute_mic">Mute Microphone</button>
+
+    <!-- Replace 'your_script.js' with the actual name of your JavaScript file -->
+    <script src="{% static 'js/webrtc.js' %}"></script>
+</body>
+</html>
